@@ -15,6 +15,8 @@ function Map({ searchResult }) {
   const [viewPort, setViewPort] = useState({
     width: "100%",
     height: "100vh",
+    position: "sticky",
+    top: "0px",
     latitude: center.latitude,
     longitude: center.longitude,
     zoom: 11,
