@@ -8,7 +8,7 @@ import {
   UsersIcon,
 } from "@heroicons/react/solid";
 import useDarkMode from "../hooks/useDarkMode";
-import { signIn, useSession } from "next-auth/client";
+import { signIn, useSession } from "next-auth/react"
 import { useEffect, useState } from "react";
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -16,7 +16,7 @@ import { DateRangePicker } from "react-date-range";
 
 function Header() {
   const [colorTheme, setTheme] = useDarkMode();
-  const [session] = useSession();
+  const { data: session, status } = useSession()
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());

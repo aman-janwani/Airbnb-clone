@@ -8,7 +8,7 @@ import { StarIcon } from "@heroicons/react/solid";
 import { HeartIcon as HeartIcon2 } from "@heroicons/react/solid";
 import { useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
-import { session } from "next-auth/client";
+import { session } from "next-auth/react";
 import axios from "axios";
 
 const stripePromise = loadStripe(process.env.stripe_public_key);
